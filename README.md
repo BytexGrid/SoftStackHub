@@ -13,7 +13,7 @@ SoftStackHub streamlines the process of setting up development environments, cre
 - Filter templates based on professional roles and use cases
 - Create and share your own software setups
 - Save drafts while creating templates
-- Quick template creation through system scanning
+- Quick template creation through system scanning (yet to implement)
 
 ### User Features
 - GitHub OAuth authentication

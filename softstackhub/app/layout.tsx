@@ -8,7 +8,7 @@ import { AuthProvider } from './context/AuthContext';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SoftStacker - Find Your Perfect Software Stack",
+  title: "SoftStackHub - Find Your Perfect Software Stack",
   description: "Discover and share curated software templates for your workflow",
 };
 

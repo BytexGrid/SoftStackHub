@@ -21,7 +21,7 @@ export async function GET(request: Request) {
         const brewResponse = await fetch(url, {
           headers: {
             'Accept': 'application/json',
-            'User-Agent': 'SoftStacker/1.0'
+            'User-Agent': 'SoftStackHub/1.0'
           }
         });
         
@@ -166,7 +166,7 @@ export async function GET(request: Request) {
     const response = await fetch(url, {
       headers: {
         'Accept': 'application/json',
-        'User-Agent': 'SoftStacker/1.0'
+        'User-Agent': 'SoftStackHub/1.0'
       }
     });
     

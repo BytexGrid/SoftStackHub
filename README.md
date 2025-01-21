@@ -1,10 +1,10 @@
-# SoftStacker
+# SoftStackHub
 
-A community-driven platform for discovering and sharing software templates across different operating systems. SoftStacker helps users find the right software setup based on their operating system and professional role.
+A community-driven platform for discovering and sharing software templates across different operating systems. SoftStackHub helps users find the right software setup based on their operating system and professional role.
 
 ## About
 
-SoftStacker streamlines the process of setting up development environments, creative workstations, and productivity tools across Windows, macOS, and Linux. Whether you're a developer, designer, or content creator, you can find and share curated collections of tools that work best for your workflow.
+SoftStackHub streamlines the process of setting up development environments, creative workstations, and productivity tools across Windows, macOS, and Linux. Whether you're a developer, designer, or content creator, you can find and share curated collections of tools that work best for your workflow.
 
 ## Features
 
@@ -40,12 +40,12 @@ SoftStacker streamlines the process of setting up development environments, crea
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/BytexGrid/SoftStacker.git
+   git clone https://github.com/BytexGrid/SoftStackHub.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd SoftStacker/softstacker
+   cd SoftStackHub/softstackhub
    ```
 
 3. Install dependencies:
@@ -71,8 +71,8 @@ SoftStacker streamlines the process of setting up development environments, crea
 ## Project Structure
 
 ```
-SoftStacker/
-├── softstacker/           # Next.js application
+SoftStackHub/
+├── softstackhub/           # Next.js application
 │   ├── app/              # App Router pages and layouts
 │   │   ├── (auth)/      # Authentication routes
 │   │   ├── (os)/        # OS-specific template routes
@@ -107,7 +107,7 @@ Please ensure your PR adheres to our coding standards and includes appropriate t
 
 ## Documentation
 
-For detailed documentation, please visit our [Wiki](https://github.com/BytexGrid/SoftStacker/wiki).
+For detailed documentation, please visit our [Wiki](https://github.com/BytexGrid/SoftStackHub/wiki).
 
 ## License
 

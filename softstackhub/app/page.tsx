@@ -265,10 +265,10 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-20">
               <h2 className="text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl mb-6">
-                Why SoftStacker?
+                Why SoftStackHub?
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Discover how SoftStacker revolutionizes your software setup experience
+                Discover how SoftStackHub revolutionizes your software setup experience
               </p>
             </div>
 
@@ -315,7 +315,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Save Time and Effort</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Skip the tedious process of researching software combinations. With SoftStacker, discover community-recommended software setups instantly.
+                  Skip the tedious process of researching software combinations. With SoftStackHub, discover community-recommended software setups instantly.
                 </p>
                 <ul className="space-y-3 text-gray-600 dark:text-gray-300">
                   <li className="flex items-center gap-3">
@@ -381,7 +381,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Cross-Platform Support</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Find the right software no matter which operating system you use. SoftStacker provides tailored suggestions for Windows, macOS, and Linux users.
+                  Find the right software no matter which operating system you use. SoftStackHub provides tailored suggestions for Windows, macOS, and Linux users.
                 </p>
                 <ul className="space-y-3 text-gray-600 dark:text-gray-300">
                   <li className="flex items-center gap-3">
@@ -416,14 +416,14 @@ export default function Home() {
             {/* Project Info */}
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center gap-2 mb-4">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">SoftStacker</h3>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white">SoftStackHub</h3>
               </div>
               <p className="text-gray-600 dark:text-gray-300 mb-4 max-w-md">
                 Discover the perfect software stack for your workflow. Community-driven software recommendations for every platform and profession.
               </p>
               <div className="flex items-center gap-4">
                 <a
-                  href="https://github.com/BytexGrid/SoftStacker"
+                  href="https://github.com/BytexGrid/SoftStackHub"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
@@ -487,7 +487,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a 
-                    href="https://github.com/BytexGrid/SoftStacker/issues"
+                    href="https://github.com/BytexGrid/SoftStackHub/issues"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
@@ -501,7 +501,7 @@ export default function Home() {
 
           <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
             <p className="text-center text-gray-500 dark:text-gray-400">
-              © {new Date().getFullYear()} SoftStacker. Built by the community, for the community. Open source with ❤️
+              © {new Date().getFullYear()} SoftStackHub. Built by the community, for the community. Open source with ❤️
             </p>
           </div>
         </div>

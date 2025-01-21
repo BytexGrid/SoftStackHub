@@ -1,8 +1,8 @@
-# SoftStacker - Technical Documentation
+# SoftStackHub - Technical Documentation
 
 ## Project Overview
 
-SoftStacker is a community-driven platform designed to help users discover and share software templates across different operating systems. The platform aims to streamline the process of setting up software environments by providing curated collections of tools based on user roles and operating systems.
+SoftStackHub is a community-driven platform designed to help users discover and share software templates across different operating systems. The platform aims to streamline the process of setting up software environments by providing curated collections of tools based on user roles and operating systems.
 
 ### Core Features
 - Cross-platform software template discovery
@@ -28,8 +28,8 @@ SoftStacker is a community-driven platform designed to help users discover and s
 
 ### Project Structure
 ```
-SoftStacker/
-├── softstacker/           # Main Next.js application
+SoftStackHub/
+├── softstackhub/           # Main Next.js application
 │   ├── app/              # App Router pages and layouts
 │   ├── components/       # Reusable UI components
 │   ├── lib/             # Utility functions and helpers

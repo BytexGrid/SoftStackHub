@@ -23,7 +23,7 @@ export default function Navbar() {
           {/* Left side: Logo and navigation */}
           <div className="flex items-center space-x-8">
             <Link href="/" className="text-xl font-bold text-gray-900 dark:text-white">
-              SoftStacker
+              SoftStackHub
             </Link>
             <div className="hidden md:flex space-x-8">
               <Link 
@@ -33,7 +33,7 @@ export default function Navbar() {
                 Browse Templates
               </Link>
               <a 
-                href="https://github.com/BytexGrid/SoftStacker"
+                href="https://github.com/BytexGrid/SoftStackHub"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
@@ -53,7 +53,7 @@ export default function Navbar() {
             </Link>
             <ThemeToggle />
             <a
-              href="https://github.com/BytexGrid/SoftStacker"
+              href="https://github.com/BytexGrid/SoftStackHub"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:block text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
@@ -161,7 +161,7 @@ export default function Navbar() {
               Browse Templates
             </Link>
             <a
-              href="https://github.com/BytexGrid/SoftStacker"
+              href="https://github.com/BytexGrid/SoftStackHub"
               target="_blank"
               rel="noopener noreferrer"
               className="block pl-3 pr-4 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800"

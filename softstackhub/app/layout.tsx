@@ -9,9 +9,41 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "SoftStackHub - Find Your Perfect Software Stack",
-  description: "Discover and share curated software templates for your workflow",
-  verification: {
-    google: 'jWuI40FvxcfzijaXf-ALNb4p8whNckdL49ZlWzdJYPM',
+  description: "Discover and share curated software templates for your workflow. SoftStackHub helps developers find the best tools and applications for their projects.",
+  keywords: "software stack, development tools, software templates, developer workflow, programming tools, tech stack, development environment",
+  metadataBase: new URL('https://softstackhub.vercel.app'),
+  openGraph: {
+    title: 'SoftStackHub - Find Your Perfect Software Stack',
+    description: 'Discover and share curated software templates for your workflow',
+    url: 'https://softstackhub.vercel.app',
+    siteName: 'SoftStackHub',
+    images: [
+      {
+        url: '/ssh.png',
+        width: 512,
+        height: 512,
+        alt: 'SoftStackHub Logo',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SoftStackHub - Find Your Perfect Software Stack',
+    description: 'Discover and share curated software templates for your workflow',
+    images: ['/ssh.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   icons: {
     icon: [

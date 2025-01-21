@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   description: "Discover and share curated software templates for your workflow. SoftStackHub helps developers find the best tools and applications for their projects.",
   keywords: "software stack, development tools, software templates, developer workflow, programming tools, tech stack, development environment",
   metadataBase: new URL('https://softstackhub.vercel.app'),
+  verification: {
+    google: 'jWuI40FvxcfzijaXf-ALNb4p8whNckdL49ZlWzdJYPM',
+  },
   openGraph: {
     title: 'SoftStackHub - Find Your Perfect Software Stack',
     description: 'Discover and share curated software templates for your workflow',

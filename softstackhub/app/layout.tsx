@@ -10,6 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "SoftStackHub - Find Your Perfect Software Stack",
   description: "Discover and share curated software templates for your workflow",
+  verification: {
+    google: 'jWuI40FvxcfzijaXf-ALNb4p8whNckdL49ZlWzdJYPM',
+  },
   icons: {
     icon: [
       {

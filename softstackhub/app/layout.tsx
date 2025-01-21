@@ -10,6 +10,32 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "SoftStackHub - Find Your Perfect Software Stack",
   description: "Discover and share curated software templates for your workflow",
+  icons: {
+    icon: [
+      {
+        url: '/ssh.ico',
+        sizes: '32x32',
+      },
+      {
+        url: '/ssh.ico',
+        sizes: '16x16',
+      },
+      {
+        url: '/ssh.png',
+        sizes: '192x192',
+      },
+      {
+        url: '/ssh.png',
+        sizes: '512x512',
+      }
+    ],
+    shortcut: '/ssh.ico',
+    apple: {
+      url: '/ssh.png',
+      sizes: '180x180',
+      type: 'image/png',
+    },
+  },
 };
 
 export default function RootLayout({

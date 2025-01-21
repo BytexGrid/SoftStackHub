@@ -22,8 +22,17 @@ export default function Navbar() {
         <div className="flex justify-between h-16 items-center">
           {/* Left side: Logo and navigation */}
           <div className="flex items-center space-x-8">
-            <Link href="/" className="text-xl font-bold text-gray-900 dark:text-white">
-              SoftStackHub
+            <Link href="/" className="flex items-center space-x-2">
+              <Image
+                src="/ssh.png"
+                alt="SoftStackHub Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8"
+              />
+              <span className="text-xl font-bold text-gray-900 dark:text-white">
+                SoftStackHub
+              </span>
             </Link>
             <div className="hidden md:flex space-x-8">
               <Link 

@@ -1,24 +1,28 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Navbar from "./components/Navbar";
-import { ThemeProvider } from "./providers/ThemeProvider";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Navbar from './components/Navbar';
+import { ThemeProvider } from './providers/ThemeProvider';
 import { AuthProvider } from './context/AuthContext';
 import { Analytics } from '@vercel/analytics/react';
+import { Toaster } from 'sonner';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "SoftStackHub - Find Your Perfect Software Stack",
-  description: "Discover and share curated software templates for your workflow. SoftStackHub helps developers find the best tools and applications for their projects.",
-  keywords: "software stack, development tools, software templates, developer workflow, programming tools, tech stack, development environment",
+  title: 'SoftStackHub - Find Your Perfect Software Stack',
+  description:
+    'Discover and share curated software templates for your workflow. SoftStackHub helps developers find the best tools and applications for their projects.',
+  keywords:
+    'software stack, development tools, software templates, developer workflow, programming tools, tech stack, development environment',
   metadataBase: new URL('https://softstackhub.vercel.app'),
   verification: {
     google: 'jWuI40FvxcfzijaXf-ALNb4p8whNckdL49ZlWzdJYPM',
   },
   openGraph: {
     title: 'SoftStackHub - Find Your Perfect Software Stack',
-    description: 'Discover and share curated software templates for your workflow',
+    description:
+      'Discover and share curated software templates for your workflow',
     url: 'https://softstackhub.vercel.app',
     siteName: 'SoftStackHub',
     images: [
@@ -35,7 +39,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'SoftStackHub - Find Your Perfect Software Stack',
-    description: 'Discover and share curated software templates for your workflow',
+    description:
+      'Discover and share curated software templates for your workflow',
     images: ['/ssh.png'],
   },
   robots: {
@@ -66,7 +71,7 @@ export const metadata: Metadata = {
       {
         url: '/ssh.png',
         sizes: '512x512',
-      }
+      },
     ],
     shortcut: '/ssh.ico',
     apple: {
@@ -84,7 +89,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased bg-white dark:bg-gray-900`}>
+      <body
+        className={`${inter.className} antialiased bg-white dark:bg-gray-900`}
+      >
         <ThemeProvider>
           <AuthProvider>
             <div className="pt-16">
@@ -94,6 +101,7 @@ export default function RootLayout({
           </AuthProvider>
         </ThemeProvider>
         <Analytics />
+        <Toaster richColors position="bottom-right" expand={false} />
       </body>
     </html>
   );

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/app/context/AuthContext';
 import { ArrowUpIcon, ArrowDownIcon } from '@heroicons/react/24/outline';
+import { toast } from 'sonner';
 
 interface VoteButtonProps {
   templateId: string;
@@ -12,7 +13,13 @@ interface VoteButtonProps {
   useStaticVotes?: boolean;
 }
 
-export default function VoteButton({ templateId, initialVotes = 0, onVoteChange, showVoteButtons = true, useStaticVotes = false }: VoteButtonProps) {
+export default function VoteButton({
+  templateId,
+  initialVotes = 0,
+  onVoteChange,
+  showVoteButtons = true,
+  useStaticVotes = false,
+}: VoteButtonProps) {
   const { user } = useAuth();
   const [votes, setVotes] = useState(initialVotes);
   const [userVote, setUserVote] = useState<'up' | 'down' | null>(null);
@@ -28,7 +35,7 @@ export default function VoteButton({ templateId, initialVotes = 0, onVoteChange,
       try {
         const response = await fetch(`/api/templates/${templateId}/vote/check`);
         if (!response.ok) throw new Error('Failed to check vote');
-        
+
         const data = await response.json();
         setUserVote(data.voteType);
         setVotes(data.votes);
@@ -45,7 +52,7 @@ export default function VoteButton({ templateId, initialVotes = 0, onVoteChange,
 
   const handleVote = async (voteType: 'up' | 'down') => {
     if (!user) {
-      alert('Please sign in to vote');
+      toast.info('Please sign in to vote');
       return;
     }
 
@@ -53,12 +60,12 @@ export default function VoteButton({ templateId, initialVotes = 0, onVoteChange,
       const response = await fetch(`/api/templates/${templateId}/vote`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ voteType })
+        body: JSON.stringify({ voteType }),
       });
 
       if (!response.ok) {
         if (response.status === 401) {
-          alert('Please sign in again to vote');
+          toast.info('Please sign in again to vote');
           return;
         }
         throw new Error('Failed to vote');
@@ -70,7 +77,7 @@ export default function VoteButton({ templateId, initialVotes = 0, onVoteChange,
       onVoteChange?.(data.votes);
     } catch (error) {
       console.error('Error voting:', error);
-      alert('Failed to vote. Please try again.');
+      toast.error('Failed to vote. Please try again.');
     }
   };
 
@@ -88,19 +95,25 @@ export default function VoteButton({ templateId, initialVotes = 0, onVoteChange,
         <button
           onClick={() => handleVote('up')}
           className={`p-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors ${
-            userVote === 'up' ? 'text-green-600 dark:text-green-400' : 'text-gray-600 dark:text-gray-400'
+            userVote === 'up'
+              ? 'text-green-600 dark:text-green-400'
+              : 'text-gray-600 dark:text-gray-400'
           }`}
           title="Upvote"
         >
           <ArrowUpIcon className="h-5 w-5" />
         </button>
       )}
-      
-      <span className={`min-w-[2ch] text-center ${
-        votes > 0 ? 'text-green-600 dark:text-green-400' :
-        votes < 0 ? 'text-red-600 dark:text-red-400' :
-        'text-gray-600 dark:text-gray-400'
-      }`}>
+
+      <span
+        className={`min-w-[2ch] text-center ${
+          votes > 0
+            ? 'text-green-600 dark:text-green-400'
+            : votes < 0
+            ? 'text-red-600 dark:text-red-400'
+            : 'text-gray-600 dark:text-gray-400'
+        }`}
+      >
         {votes}
       </span>
 
@@ -108,7 +121,9 @@ export default function VoteButton({ templateId, initialVotes = 0, onVoteChange,
         <button
           onClick={() => handleVote('down')}
           className={`p-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors ${
-            userVote === 'down' ? 'text-red-600 dark:text-red-400' : 'text-gray-600 dark:text-gray-400'
+            userVote === 'down'
+              ? 'text-red-600 dark:text-red-400'
+              : 'text-gray-600 dark:text-gray-400'
           }`}
           title="Downvote"
         >
@@ -117,4 +132,4 @@ export default function VoteButton({ templateId, initialVotes = 0, onVoteChange,
       )}
     </div>
   );
-} 
+}
